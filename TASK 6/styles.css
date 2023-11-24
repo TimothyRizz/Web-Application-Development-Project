@@ -1,0 +1,12 @@
+/* Style the cart dropdown */
+#cartDropdown {
+    max-width: 500px;
+    padding: 10px;
+  }
+  
+  /* Style the cart items */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }

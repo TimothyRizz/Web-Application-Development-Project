@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css"> <!-- Add the link to your CSS file -->
+  <title>Softsell</title>
+</head>
+<body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar has-shadow is-white" style="position: fixed !important; width: 100%; top: 0;">
+        <!-- Logo Brand -->
+        <div class="container">
+          <div class="navbar-brand">
+            <a href="#" class="navbar-item">
+              <img src="assets/logo.png" alt="" style="max-height: 50px;">
+            </a>
+            <!-- Burger for Moblie Links -->
+            <a class="navbar-burger" id="burger">
+              <span class="has-background-link-dark"></span>
+              <span class="has-background-link-dark"></span>
+              <span class="has-background-link-dark"></span>
+            </a>
+          </div>
+          <!-- Nav Links -->
+          <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+              <a class="navbar-item has-text-link">Shopping Cart</a>
+              <!-- Shopping Cart Dropdown -->
+              <div id="shoppingCartBar" class="navbar-item has-dropdown is-hoverable is-hidden">
+                <a class="navbar-link has-text-link" id="shoppingCartBarText">
+                  Shopping Cart (0)
+                </a>
+                <div class="navbar-dropdown" id="cartDropdown">
+                  <!-- Cart content goes here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Breadcrumb -->
+      <div class="container section mt-6">
+        <nav class="breadcrumb has-arrow-separator">
+          <ul>
+            <li><a class="has-text-link">Softsell</a></li>
+            <li><a class="has-text-link">Shop</a></li>
+            <li><a class="has-text-link">Raspberry Pi 3 Model B+</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Product Info -->
+      <section class="section">
+        <div class="container">
+          <div class="columns is-vcentered is-multiline">
+            <div class="column is-3-desktop is-6-tablet">
+              <h1 class="is-size-1 title has-text-link">Raspberry Pi 3</h1>
+              <h2 class="is-size-2 subtitle has-text-link">Model B+</h2>
+              <p class="">The Raspberry Pi 3 Model B+ is a versatile and powerful single-board computer designed for a wide range of projects.</p>
+            </div>
+            <div class="column is-5-desktop is-6-tablet has-text-centered">
+              <img src="assets/product.png" alt="">
+            </div>
+            <div class="column is-4-desktop">
+              <div class="is-size-4 mb-4 is-12-tablet has-text-weight-bold has-text-link">£47.91</div>
+              <p>The Raspberry Pi 3 Model B+ offers endless possibilities for creative minds. Explore the world of coding, electronics, and DIY projects with this affordable and versatile single-board computer. Get yours today and start building your next great idea.</p>
+              <form>
+                <div class="field mt-4">
+                  <div class="control mb-4">
+                    <div class="select is-dark">
+                      <select id="quantitySelect">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <button class="button has-background-link has-text-white mt-4" id="addToCartButton">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tabs/Message Box -->
+      <section class="section">
+        <div class="container">
+          <div class="columns is-variable is-8">
+            <div class="column is-7-tablet">
+              <!-- Tabs -->
+              <div class="tabs is-boxed">
+                <ul>
+                  <li class="is-active has-text-weight-bold" data-target="product-details">
+                    <a class="has-text-link">Product Details</a>
+                  </li>
+                  <li data-target="delivery-information">
+                    <a class="has-text-link">Delivery Information</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="px-2" id="tab-content">
+                <div id="product-details">
+                  <h4 class="is-size-4 subtitle has-text-link">Product Details</h4>
+                  <h5 class="is-size-5 subtitle has-text-link">Key Features</h2>
+                  <ul>
+                    <li><strong class="has-text-link">Processor:</strong> Equipped with a <strong>1.4GHz quad-core ARM Cortex-A53 CPU</strong>, providing a substantial performance boost.</li>
+                    <li><strong class="has-text-link">Wireless Connectivity:</strong> Integrated <strong>dual-band wireless LAN</strong> (2.4GHz and 5GHz) and <strong>Bluetooth 4.2</strong> for seamless wireless communication.</li>
+                    <li><strong class="has-text-link">Fast Ethernet:</strong> Gigabit Ethernet port for high-speed wired networking.</li>
+                    <li><strong class="has-text-link">Memory:</strong> <strong>1GB LPDDR2 SDRAM</strong> to support multitasking and memory-intensive applications.</li>
+                    <li><strong class="has-text-link">Expansion:</strong> <strong>40 GPIO pins</strong> for connecting various sensors, displays, and accessories.</li>
+                    <li><strong class="has-text-link">USB Ports:</strong> <strong>Four USB 2.0 ports</strong> for connecting peripherals such as a keyboard, mouse, and external storage.</li>
+                    <li><strong class="has-text-link">MicroSD Slot:</strong> <strong>A microSD card slot</strong> for the operating system and data storage.</li>
+                    <li><strong class="has-text-link">HDMI Output:</strong> <strong>Full-sized HDMI port</strong> for connecting to a monitor or TV.</li>
+                    <li><strong class="has-text-link">Power:</strong> Powered via micro-USB or PoE (Power over Ethernet) with the addition of a PoE HAT.</li>
+                  </ul>
+                </div>
+                <div id="delivery-information" class="is-hidden">
+                  <h4 class="is-size-4 subtitle has-text-link">Delivery Information</h4>
+                  <h5 class="is-size-5 subtitle has-text-link">Shipping Options</h3>
+                  <ul>
+                    <li><strong class="has-text-link">Standard Shipping:</strong> We offer standard shipping options for most orders. Delivery times may vary based on your location, but typically range from 3 to 7 business days.</li>
+                    <li><strong class="has-text-link">Express Shipping:</strong> If you need your order expedited, we provide express shipping services with faster delivery times. Additional charges may apply.</li>
+                    <li><strong class="has-text-link">International Shipping:</strong> We offer international shipping to customers around the world. Shipping times and fees may vary by destination.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Message Box -->
+            <div class="column is-5-tablet">
+              <div class="message">
+                <div class="message-header has-background-link">
+                  <p>Stay wired!</p>
+                </div>
+                <div class="message-body">
+                  <p>By subscribing to our newsletter, you'll stay up-to-date with the latest news, special promotions, and exclusive offers from our online shop.</p>
+                  <div class="has-text-centered">
+                    <button class="button has-text-white has-background-link" id="signup">Sign Up</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Related Products -->
+      <section class="section is-hidden-mobile">
+        <div class="container">
+          <h2 class="is-size-3 px-4 has-text-link has-text-centered">Related Products</h2>
+          <div class="columns mt-5 is-variable is-8 is-centered">
+            <!-- Cards -->
+            <div class="column is-4-tablet is-3-desktop">
+              <div class="card">
+                <div class="card-image has-text-centered">
+                  <img src="assets/p1.png" alt="">
+                </div>
+                <div class="card-content">
+                  <p>£12.95</p>
+                  <p class="title is-size-5 has-text-link">Pi3 Model B+ hardcase</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <a class="has-text-link">View</a>
+                  </p>
+                  <p class="card-footer-item">
+                    <a class="has-text-link">Add to Cart</a>
+                  </p>
+                </footer>
+              </div>
+            </div>
+            <div class="column is-4-tablet is-3-desktop">
+              <div class="card">
+                <div class="card-image has-text-centered">
+                  <img src="assets/p2.png" alt="">
+                </div>
+                <div class="card-content">
+                  <p>£8.95</p>
+                  <p class="title is-size-5 has-text-link">Rassberry Charger</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <a class="has-text-link">View</a>
+                  </p>
+                  <p class="card-footer-item">
+                    <a class="has-text-link">Add to Cart</a>
+                  </p>
+                </footer>
+              </div>
+            </div>
+            <div class="column is-4-tablet is-3-desktop">
+              <div class="card">
+                <div class="card-image has-text-centered">
+                  <img src="assets/p3.png"; alt="">
+                </div>
+                <div class="card-content">
+                  <p>£67.95</p>
+                  <p class="title is-size-5 has-text-link">Raspberry Pi 4 Modell B</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <a class="has-text-link">View</a>
+                  </p>
+                  <p class="card-footer-item">
+                    <a class="has-text-link">Add to Cart</a>
+                  </p>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal -->
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+          <h3 class="title has-text-centered has-text-link">Join the Club</h3>
+          <form>
+            <div class="field  mt-4">
+              <label class="label has-text-link">Name</label>
+              <div class="control">
+                <input type="text" class="input" placeholder="Name">
+              </div>
+            </div>
+            <div class="field mt-4">
+              <label class="label has-text-link">Email</label>
+              <div class="control">
+                <input type="email" class="input" placeholder="Email">
+              </div>
+            </div>
+            <div class="field mt-4">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" class="is-link">
+                  I agree to the <a class="has-text-link">terms and conditions</a> of the club.
+                </label>
+              </div>
+            </div>
+            <div class="has-text-centered mt-4">
+              <button class="button has-background-link has-text-white">Sign Up</button>
+            </div>
+          </form>
+          <div class="modal-close has-background-link"></div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer has-background-black">
+        <div class="content has-text-centered has-text-white">
+          <p>Copyright 2023 IU Internationale Hochschule</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
